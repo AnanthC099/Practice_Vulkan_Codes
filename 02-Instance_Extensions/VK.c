@@ -5,25 +5,19 @@
 #include "VK.h"			
 #define LOG_FILE (char*)"Log.txt" 
 
-//First Change
 //Vulkan related header files
- #define VK_USE_PLATFORM_WIN32_KHR // XLIB_KHR, MACOS_KHR & MOLTEN something
- #include <vulkan/vulkan.h> //(Only those members are enabled connected with above macro {conditional compilation using #ifdef internally})
- 
- //Second Change
- //Vulkan related libraries
- #pragma comment(lib, "vulkan-1.lib")
+#define VK_USE_PLATFORM_WIN32_KHR // XLIB_KHR, MACOS_KHR & MOLTEN something
+#include <vulkan/vulkan.h> //(Only those members are enabled connected with above macro {conditional compilation using #ifdef internally})
+
 #define WIN_WIDTH 800
 #define WIN_HEIGHT 600
 
+//Vulkan related libraries
+#pragma comment(lib, "vulkan-1.lib")
 
 // Global Function Declarations
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 
-// Global Variable Declarations
-FILE* gFILE = NULL;
-
-//Third Change
 const char* gpszAppName = "ARTR";
 
 HWND ghwnd = NULL;
@@ -33,23 +27,27 @@ DWORD dwStyle = 0;
 WINDOWPLACEMENT wpPrev;
 BOOL gbFullscreen = FALSE;
 
-//Vulkan related global variables
- 
- //Instance extension related variables
- uint32_t enabledInstanceExtensionsCount = 0;
- /*
- VK_KHR_SURFACE_EXTENSION_NAME
- VK_KHR_WIN32_SURFACE_EXTENSION_NAME
- */
- const char* enabledInstanceExtensionNames_array[2];
+// Global Variable Declarations
+FILE* gFILE = NULL;
 
-/************************************************************/
+//Vulkan related global variables
+
+//Instance extension related variables
+uint32_t enabledInstanceExtensionsCount = 0;
+/*
+VK_KHR_SURFACE_EXTENSION_NAME
+VK_KHR_WIN32_SURFACE_EXTENSION_NAME
+*/
+const char* enabledInstanceExtensionNames_array[2];
+
+//Vulkan Instance
+VkInstance vkInstance = VK_NULL_HANDLE;
 
 // Entry-Point Function
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdLine, int iCmdShow)
 {
 	// Function Declarations
-	VkResult  initialize(void); //Fourth Change
+	VkResult initialize(void);
 	void uninitialize(void);
 	void display(void);
 	void update(void);
@@ -58,9 +56,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdLi
 	WNDCLASSEX wndclass;
 	HWND hwnd;
 	MSG msg;
-	//TCHAR szAppName[] = TEXT("01-WindowStub");
 	TCHAR szAppName[256];
-	BOOL bDone = FALSE;
 	int iResult = 0;
 
 	int SW = GetSystemMetrics(SM_CXSCREEN);
@@ -68,8 +64,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdLi
 	int xCoordinate = ((SW / 2) - (WIN_WIDTH / 2));
 	int yCoordinate = ((SH / 2) - (WIN_HEIGHT / 2));
 
- 	VkResult vkResult = VK_SUCCESS; //Fifth Change
-	
+	BOOL bDone = FALSE;
+	VkResult vkResult = VK_SUCCESS;
+
 	// Code
 
 	// Log File
@@ -79,11 +76,12 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdLi
 		MessageBox(NULL, TEXT("Program cannot open log file!"), TEXT("Error"), MB_OK | MB_ICONERROR);
 		exit(0);
 	}
-
-	fprintf(gFILE, "WinMain()-> Program started successfully\n");
+	else
+	{
+		fprintf(gFILE, "WinMain()-> Program started successfully\n");
+	}
 	
-	wsprintf(szAppName, TEXT("%s"), gpszAppName); //Sixth Change
-
+	wsprintf(szAppName, TEXT("%s"), gpszAppName);
 
 	// WNDCLASSEX Initilization 
 	wndclass.cbSize = sizeof(WNDCLASSEX);
@@ -106,7 +104,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdLi
 	// Create Window								// glutCreateWindow
 	hwnd = CreateWindowEx(WS_EX_APPWINDOW,			// to above of taskbar for fullscreen
 						szAppName,
-						TEXT("01-WindowStub: Vulkan"),
+						TEXT("03_Instance"),
 						WS_OVERLAPPEDWINDOW | WS_CLIPCHILDREN | WS_CLIPSIBLINGS | WS_VISIBLE,
 						xCoordinate,				// glutWindowPosition 1st Parameter
 						yCoordinate,				// glutWindowPosition 2nd Parameter
@@ -119,12 +117,13 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdLi
 
 	ghwnd = hwnd;
 
-	// Initialization : 7th Change
+	// Initialization
 	vkResult = initialize();
 	if (vkResult != VK_SUCCESS)
 	{
 		fprintf(gFILE, "WinMain(): initialize()  function failed\n");
 		DestroyWindow(hwnd);
+		hwnd = NULL;
 	}
 	else
 	{
@@ -285,29 +284,27 @@ void ToggleFullscreen(void)
 	}
 }
 
-
-//Eighth Change
 VkResult initialize(void)
 {
-	//Function declarations
- 	VkResult FillInstanceExtensionNames(void);
-	
-	// Code
+	//Function declaration
+	VkResult CreateVulkanInstance(void);
 	
 	//Variable declarations
- 	VkResult vkResult = VK_SUCCESS;
+	VkResult vkResult = VK_SUCCESS;
 	
-	vkResult = FillInstanceExtensionNames();
- 	if (vkResult != VK_SUCCESS)
- 	{
- 		fprintf(gFILE, "WinMain(): FillInstanceExtensionNames()  function failed\n");
- 		return vkResult;
- 	}
- 	else
- 	{
- 		fprintf(gFILE, "WinMain(): FillInstanceExtensionNames() succedded\n");
- 	}
+	// Code
+	vkResult = CreateVulkanInstance();
+	if (vkResult != VK_SUCCESS)
+	{
+		fprintf(gFILE, "initialize(): CreateVulkanInstance()  function failed\n");
+		return vkResult;
+	}
+	else
+	{
+		fprintf(gFILE, "initialize(): CreateVulkanInstance() succedded\n");
+	}
 	
+
 	return vkResult;
 }
 
@@ -329,7 +326,6 @@ void update(void)
 	// Code
 }
 
-
 void uninitialize(void)
 {
 		// Function Declarations
@@ -349,6 +345,16 @@ void uninitialize(void)
 			ghwnd = NULL;
 		}
 
+		/*
+		Destroy VkInstance in uninitialize()
+		*/
+		if(vkInstance)
+		{
+			vkDestroyInstance(vkInstance, NULL); //https://registry.khronos.org/vulkan/specs/latest/man/html/vkDestroyInstance.html
+			vkInstance = VK_NULL_HANDLE;
+			fprintf(gFILE, "uninitialize(): vkDestroyInstance() sucedded\n");
+		}
+
 		// Close the log file
 		if (gFILE)
 		{
@@ -359,166 +365,253 @@ void uninitialize(void)
 
 }
 
-VkResult FillInstanceExtensionNames(void)
+//Definition of Vulkan related functions
+
+VkResult CreateVulkanInstance(void)
 {
+	/*
+		As explained before fill and initialize required extension names and count in 2 respective global variables (Lasst 8 steps mhanje instance cha first step)
+	*/
+	//Function declarations
+	VkResult FillInstanceExtensionNames(void);
+	
 	//Variable declarations
- 	VkResult vkResult = VK_SUCCESS;
+	VkResult vkResult = VK_SUCCESS;
+
+	// Code
+	vkResult = FillInstanceExtensionNames();
+	if (vkResult != VK_SUCCESS)
+	{
+		fprintf(gFILE, "CreateVulkanInstance(): FillInstanceExtensionNames()  function failed\n");
+		return vkResult;
+	}
+	else
+	{
+		fprintf(gFILE, "CreateVulkanInstance(): FillInstanceExtensionNames() succedded\n");
+	}
 	
 	/*
- 	1. Find how many instance extensions are supported by Vulkan driver of/for this version and keep the count in a local variable.
- 	1.3.296 madhe ek instance navta , je aata add zala aahe 1.4.304 madhe , VK_NV_DISPLAY_STEREO
- 	*/
-	uint32_t instanceExtensionCount = 0;
+	Initialize struct VkApplicationInfo (Somewhat limbu timbu)
+	*/
+	struct VkApplicationInfo vkApplicationInfo;
+	memset((void*)&vkApplicationInfo, 0, sizeof(struct VkApplicationInfo)); //Dont use ZeroMemory to keep parity across all OS
 	
-	//https://registry.khronos.org/vulkan/specs/latest/man/html/vkEnumerateInstanceExtensionProperties.html
-	vkResult = vkEnumerateInstanceExtensionProperties(NULL, &instanceExtensionCount, NULL);
- 	/* like in OpenCL
- 	1st - which layer extension required, as want all so NULL (akha driver supported kelleli extensions)
- 	2nd - count de mala
- 	3rd - Extension cha property cha array, NULL aahe karan count nahi ajun aplyakade
- 	*/
- 	if (vkResult != VK_SUCCESS)
- 	{
- 		fprintf(gFILE, "FillInstanceExtensionNames(): First call to vkEnumerateInstanceExtensionProperties()  function failed\n");
- 		return vkResult;
- 	}
- 	else
- 	{
- 		fprintf(gFILE, "FillInstanceExtensionNames(): First call to vkEnumerateInstanceExtensionProperties() succedded\n");
- 	}
+	//https://registry.khronos.org/vulkan/specs/latest/man/html/VkApplicationInfo.html/
+	vkApplicationInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO; //First member of all Vulkan structure, for genericness and typesafety
+	vkApplicationInfo.pNext = NULL;
+	vkApplicationInfo.pApplicationName = gpszAppName; //any string will suffice
+	vkApplicationInfo.applicationVersion = 1; //any number will suffice
+	vkApplicationInfo.pEngineName = gpszAppName; //any string will suffice
+	vkApplicationInfo.engineVersion = 1; //any number will suffice
+	/*
+	Mahatavacha aahe, 
+	on fly risk aahe Sir used VK_API_VERSION_1_3 as installed 1.3.296 version
+	Those using 1.4.304 must use VK_API_VERSION_1_4
+	*/
+	vkApplicationInfo.apiVersion = VK_API_VERSION_1_4; 
 	
 	/*
- 	 Allocate and fill struct VkExtensionProperties 
- 	 (https://registry.khronos.org/vulkan/specs/latest/man/html/VkExtensionProperties.html) structure array, 
- 	 corresponding to above count
- 	*/
- 	VkExtensionProperties* vkExtensionProperties_array = NULL;
- 	vkExtensionProperties_array = (VkExtensionProperties*)malloc(sizeof(VkExtensionProperties) * instanceExtensionCount);
- 	if (vkExtensionProperties_array != NULL)
- 	{
- 		//Add log here later for failure
- 		//exit(-1);
- 	}
- 	else
- 	{
- 		//Add log here later for success
- 	}
+	Initialize struct VkInstanceCreateInfo by using information from Step1 and Step2 (Important)
+	*/
+	struct VkInstanceCreateInfo vkInstanceCreateInfo;
+	memset((void*)&vkInstanceCreateInfo, 0, sizeof(struct VkInstanceCreateInfo));
 	
-	vkResult = vkEnumerateInstanceExtensionProperties(NULL, &instanceExtensionCount, vkExtensionProperties_array);
- 	if (vkResult != VK_SUCCESS)
- 	{
- 		fprintf(gFILE, "FillInstanceExtensionNames(): Second call to vkEnumerateInstanceExtensionProperties()  function failed\n");
- 		return vkResult;
- 	}
- 	else
- 	{
- 		fprintf(gFILE, "FillInstanceExtensionNames(): Second call to vkEnumerateInstanceExtensionProperties() succedded\n");
- 	}
- 
-	/*
- 	Fill and display a local string array of extension names obtained from VkExtensionProperties structure array
- 	*/
-	char** instanceExtensionNames_array = NULL;
- 	instanceExtensionNames_array = (char**)malloc(sizeof(char*) * instanceExtensionCount);
- 	if (instanceExtensionNames_array != NULL)
- 	{
- 		//Add log here later for failure
- 		//exit(-1);
- 	}
- 	else
- 	{
- 		//Add log here later for success
- 	}
-	
-	for (uint32_t i = 0; i < instanceExtensionCount; i++)
- 	{
- 		//https://registry.khronos.org/vulkan/specs/latest/man/html/VkExtensionProperties.html
- 		instanceExtensionNames_array[i] = (char*)malloc( sizeof(char) * (strlen(vkExtensionProperties_array[i].extensionName) + 1));
- 		memcpy(instanceExtensionNames_array[i], vkExtensionProperties_array[i].extensionName, (strlen(vkExtensionProperties_array[i].extensionName) + 1));
- 		fprintf(gFILE, "FillInstanceExtensionNames(): Vulkan Extension Name = %s\n", instanceExtensionNames_array[i]);
- 	}
+	//https://registry.khronos.org/vulkan/specs/latest/man/html/VkInstanceCreateInfo.html
+	vkInstanceCreateInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
+	vkInstanceCreateInfo.pNext = NULL;
+	vkInstanceCreateInfo.pApplicationInfo = &vkApplicationInfo;
+	//folowing 2 members important
+	vkInstanceCreateInfo.enabledExtensionCount = enabledInstanceExtensionsCount;
+	vkInstanceCreateInfo.ppEnabledExtensionNames = enabledInstanceExtensionNames_array;
 	
 	/*
- 	As not required here onwards, free VkExtensionProperties array
- 	*/
- 	if (vkExtensionProperties_array)
- 	{
- 		free(vkExtensionProperties_array);
- 		vkExtensionProperties_array = NULL;
- 	}
-	
-	/*
- 	Find whether above extension names contain our required two extensions
- 	VK_KHR_SURFACE_EXTENSION_NAME
- 	VK_KHR_WIN32_SURFACE_EXTENSION_NAME
- 	Accordingly set two global variables, "required extension count" and "required extension names array"
- 	*/
-	
-	//https://registry.khronos.org/vulkan/specs/latest/man/html/VkBool32.html -> Vulkan cha bool
- 	VkBool32 vulkanSurfaceExtensionFound = VK_FALSE;
- 	VkBool32 vulkanWin32SurfaceExtensionFound = VK_FALSE;
-	for (uint32_t i = 0; i < instanceExtensionCount; i++)
- 	{
- 		if (strcmp(instanceExtensionNames_array[i], VK_KHR_SURFACE_EXTENSION_NAME) == 0)
- 		{
- 			vulkanSurfaceExtensionFound = VK_TRUE;
- 			enabledInstanceExtensionNames_array[enabledInstanceExtensionsCount++] = VK_KHR_SURFACE_EXTENSION_NAME;
- 		}
- 
- 		if (strcmp(instanceExtensionNames_array[i], VK_KHR_WIN32_SURFACE_EXTENSION_NAME) == 0)
- 		{
- 			vulkanWin32SurfaceExtensionFound = VK_TRUE;
- 			enabledInstanceExtensionNames_array[enabledInstanceExtensionsCount++] = VK_KHR_WIN32_SURFACE_EXTENSION_NAME;
- 		}
- 	}
-	
-	/*
- 	As not needed hence forth , free local string array
- 	*/
- 	for (uint32_t i =0 ; i < instanceExtensionCount; i++)
- 	{
- 		free(instanceExtensionNames_array[i]);
- 	}
- 	free(instanceExtensionNames_array);
-	
-	/*
- 	Print whether our required instance extension names or not (He log madhe yenar. Jithe print asel sarv log madhe yenar)
- 	*/
- 	if (vulkanSurfaceExtensionFound == VK_FALSE)
- 	{
- 		//Type mismatch in return VkResult and VKBool32, so return hardcoded failure
- 		vkResult = VK_ERROR_INITIALIZATION_FAILED; //return hardcoded failure
- 		fprintf(gFILE, "FillInstanceExtensionNames(): VK_KHR_SURFACE_EXTENSION_NAME not found\n");
- 		return vkResult;
- 	}
- 	else
- 	{
- 		fprintf(gFILE, "FillInstanceExtensionNames(): VK_KHR_SURFACE_EXTENSION_NAME is found\n");
- 	}
-	
-	if (vulkanWin32SurfaceExtensionFound == VK_FALSE)
- 	{
- 		//Type mismatch in return VkResult and VKBool32, so return hardcoded failure
- 		vkResult = VK_ERROR_INITIALIZATION_FAILED; //return hardcoded failure
- 		fprintf(gFILE, "FillInstanceExtensionNames(): VK_KHR_WIN32_SURFACE_EXTENSION_NAME not found\n");
- 		return vkResult;
- 	}
- 	else
- 	{
- 		fprintf(gFILE, "FillInstanceExtensionNames(): VK_KHR_WIN32_SURFACE_EXTENSION_NAME is found\n");
- 	}
- 
-	/*
- 	Print only enabled extension names
- 	*/
- 	for (uint32_t i = 0; i < enabledInstanceExtensionsCount; i++)
- 	{
- 		fprintf(gFILE, "FillInstanceExtensionNames(): Supported Vulkan Instance Extension Name = %s\n", enabledInstanceExtensionNames_array[i]);
- 	}
+	Call vkCreateInstance() to get VkInstance in a global variable and do error checking
+	*/
+	//https://registry.khronos.org/vulkan/specs/latest/man/html/vkCreateInstance.html
+	//2nd parameters is NULL as saying tuza memory allocator vapar , mazyakade custom memory allocator nahi
+	vkResult = vkCreateInstance(&vkInstanceCreateInfo, NULL, &vkInstance);
+	if (vkResult == VK_ERROR_INCOMPATIBLE_DRIVER)
+	{
+		fprintf(gFILE, "CreateVulkanInstance(): vkCreateInstance() function failed due to incompatible driver with error code %d\n", vkResult);
+		return vkResult;
+	}
+	else if (vkResult == VK_ERROR_EXTENSION_NOT_PRESENT)
+	{
+		fprintf(gFILE, "CreateVulkanInstance(): vkCreateInstance() function failed due to required extension not present with error code %d\n", vkResult);
+		return vkResult;
+	}
+	else if (vkResult != VK_SUCCESS)
+	{
+		fprintf(gFILE, "CreateVulkanInstance(): vkCreateInstance() function failed due to unknown reason with error code %d\n", vkResult);
+		return vkResult;
+	}
+	else
+	{
+		fprintf(gFILE, "CreateVulkanInstance(): vkCreateInstance() succedded\n");
+	}
 	
 	return vkResult;
 }
 
+VkResult FillInstanceExtensionNames(void)
+{
+	// Code
+	//Variable declarations
+	VkResult vkResult = VK_SUCCESS;
+
+	/*
+	1. Find how many instance extensions are supported by Vulkan driver of/for this version and keept the count in a local variable.
+	1.3.296 madhe ek instance navta , je aata add zala aahe 1.4.304 madhe , VK_NV_DISPLAY_STEREO
+	*/
+	uint32_t instanceExtensionCount = 0;
+
+	//https://registry.khronos.org/vulkan/specs/latest/man/html/vkEnumerateInstanceExtensionProperties.html
+	vkResult = vkEnumerateInstanceExtensionProperties(NULL, &instanceExtensionCount, NULL);
+	/* like in OpenCL
+	1st - which layer extension required, as want all so NULL (akha driver supported kelleli extensions)
+	2nd - count de mala
+	3rd - Extension cha property cha array, NULL aahe karan count nahi ajun aplyakade
+	*/
+	if (vkResult != VK_SUCCESS)
+	{
+		fprintf(gFILE, "FillInstanceExtensionNames(): First call to vkEnumerateInstanceExtensionProperties()  function failed\n");
+		return vkResult;
+	}
+	else
+	{
+		fprintf(gFILE, "FillInstanceExtensionNames(): First call to vkEnumerateInstanceExtensionProperties() succedded\n");
+	}
+
+	/*
+	 Allocate and fill struct VkExtensionProperties 
+	 (https://registry.khronos.org/vulkan/specs/latest/man/html/VkExtensionProperties.html) structure array, 
+	 corresponding to above count
+	*/
+	VkExtensionProperties* vkExtensionProperties_array = NULL;
+	vkExtensionProperties_array = (VkExtensionProperties*)malloc(sizeof(VkExtensionProperties) * instanceExtensionCount);
+	if (vkExtensionProperties_array != NULL)
+	{
+		//Add log here later for failure
+		//exit(-1);
+	}
+	else
+	{
+		//Add log here later for success
+	}
+
+	vkResult = vkEnumerateInstanceExtensionProperties(NULL, &instanceExtensionCount, vkExtensionProperties_array);
+	if (vkResult != VK_SUCCESS)
+	{
+		fprintf(gFILE, "FillInstanceExtensionNames(): Second call to vkEnumerateInstanceExtensionProperties()  function failed\n");
+		return vkResult;
+	}
+	else
+	{
+		fprintf(gFILE, "FillInstanceExtensionNames(): Second call to vkEnumerateInstanceExtensionProperties() succedded\n");
+	}
+
+	/*
+	Fill and display a local string array of extension names obtained from VkExtensionProperties structure array
+	*/
+	char** instanceExtensionNames_array = NULL;
+	instanceExtensionNames_array = (char**)malloc(sizeof(char*) * instanceExtensionCount);
+	if (instanceExtensionNames_array != NULL)
+	{
+		//Add log here later for failure
+		//exit(-1);
+	}
+	else
+	{
+		//Add log here later for success
+	}
+
+	for (uint32_t i =0; i < instanceExtensionCount; i++)
+	{
+		//https://registry.khronos.org/vulkan/specs/latest/man/html/VkExtensionProperties.html
+		instanceExtensionNames_array[i] = (char*)malloc( sizeof(char) * (strlen(vkExtensionProperties_array[i].extensionName) + 1));
+		memcpy(instanceExtensionNames_array[i], vkExtensionProperties_array[i].extensionName, (strlen(vkExtensionProperties_array[i].extensionName) + 1));
+		fprintf(gFILE, "FillInstanceExtensionNames(): Vulkan Extension Name = %s\n", instanceExtensionNames_array[i]);
+	}
+
+	/*
+	As not required here onwards, free VkExtensionProperties array
+	*/
+	if (vkExtensionProperties_array)
+	{
+		free(vkExtensionProperties_array);
+		vkExtensionProperties_array = NULL;
+	}
+
+	/*
+	Find whether above extension names contain our required two extensions
+	VK_KHR_SURFACE_EXTENSION_NAME
+	VK_KHR_WIN32_SURFACE_EXTENSION_NAME
+	Accordingly set two global variables, "required extension count" and "required extension names array"
+	*/
+	//https://registry.khronos.org/vulkan/specs/latest/man/html/VkBool32.html -> Vulkan cha bool
+	VkBool32 vulkanSurfaceExtensionFound = VK_FALSE;
+	VkBool32 vulkanWin32SurfaceExtensionFound = VK_FALSE;
+	for (uint32_t i = 0; i < instanceExtensionCount; i++)
+	{
+		if (strcmp(instanceExtensionNames_array[i], VK_KHR_SURFACE_EXTENSION_NAME) == 0)
+		{
+			vulkanSurfaceExtensionFound = VK_TRUE;
+			enabledInstanceExtensionNames_array[enabledInstanceExtensionsCount++] = VK_KHR_SURFACE_EXTENSION_NAME;
+		}
+
+		if (strcmp(instanceExtensionNames_array[i], VK_KHR_WIN32_SURFACE_EXTENSION_NAME) == 0)
+		{
+			vulkanWin32SurfaceExtensionFound = VK_TRUE;
+			enabledInstanceExtensionNames_array[enabledInstanceExtensionsCount++] = VK_KHR_WIN32_SURFACE_EXTENSION_NAME;
+		}
+	}
+
+	/*
+	As not needed hence forth , free local string array
+	*/
+	for (uint32_t i =0 ; i < instanceExtensionCount; i++)
+	{
+		free(instanceExtensionNames_array[i]);
+	}
+	free(instanceExtensionNames_array);
+
+	/*
+	Print whether our required instance extension names or not (He log madhe yenar. Jithe print asel sarv log madhe yenar)
+	*/
+	if (vulkanSurfaceExtensionFound == VK_FALSE)
+	{
+		//Type mismatch in return VkResult and VKBool32, so return hardcoded failure
+		vkResult = VK_ERROR_INITIALIZATION_FAILED; //return hardcoded failure
+		fprintf(gFILE, "FillInstanceExtensionNames(): VK_KHR_SURFACE_EXTENSION_NAME not found\n");
+		return vkResult;
+	}
+	else
+	{
+		fprintf(gFILE, "FillInstanceExtensionNames(): VK_KHR_SURFACE_EXTENSION_NAME is found\n");
+	}
+
+	if (vulkanWin32SurfaceExtensionFound == VK_FALSE)
+	{
+		//Type mismatch in return VkResult and VKBool32, so return hardcoded failure
+		vkResult = VK_ERROR_INITIALIZATION_FAILED; //return hardcoded failure
+		fprintf(gFILE, "FillInstanceExtensionNames(): VK_KHR_WIN32_SURFACE_EXTENSION_NAME not found\n");
+		return vkResult;
+	}
+	else
+	{
+		fprintf(gFILE, "FillInstanceExtensionNames(): VK_KHR_WIN32_SURFACE_EXTENSION_NAME is found\n");
+	}
+
+	/*
+	Print only enabled extension names
+	*/
+	for (uint32_t i = 0; i < enabledInstanceExtensionsCount; i++)
+	{
+		fprintf(gFILE, "FillInstanceExtensionNames(): Enabled Vulkan Instance Extension Name = %s\n", enabledInstanceExtensionNames_array[i]);
+	}
+
+	return vkResult;
+}
 
 
 
