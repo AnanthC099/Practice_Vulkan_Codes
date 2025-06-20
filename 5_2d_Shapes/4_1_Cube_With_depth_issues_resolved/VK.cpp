@@ -812,10 +812,11 @@ static VkShaderModule CreateShaderModule(const char* path)
     }
     free(buf); return mod;
 }
+
 static VkResult CreateGraphicsPipeline(void)
 {
-    VkShaderModule vert = CreateShaderModule("./pyramid.vert.spv");
-    VkShaderModule frag = CreateShaderModule("./pyramid.frag.spv");
+    VkShaderModule vert = CreateShaderModule("./cube.vert.spv");
+    VkShaderModule frag = CreateShaderModule("./cube.frag.spv");
     if(!vert||!frag) return VK_ERROR_INITIALIZATION_FAILED;
 
     VkPipelineShaderStageCreateInfo stages[2]={};

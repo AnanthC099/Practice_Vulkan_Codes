@@ -1,0 +1,1 @@
+del VK.exe Log.txt Vk.obj Vk.pdb Vk.res pyramid.vert.spv pyramid.frag.spv

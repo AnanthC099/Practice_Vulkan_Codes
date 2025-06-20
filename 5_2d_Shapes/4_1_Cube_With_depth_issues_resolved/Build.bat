@@ -1,10 +1,10 @@
 cls
 
-del Vk.exe Log.txt pyramid.vert.spv pyramid.frag.spv
+del Vk.exe Log.txt cube.vert.spv cube.frag.spv
 
-glslc -fshader-stage=vert pyramid.vert -o pyramid.vert.spv
+glslc -fshader-stage=vert cube.vert -o cube.vert.spv
 
-glslc -fshader-stage=frag pyramid.frag -o pyramid.frag.spv
+glslc -fshader-stage=frag cube.frag -o cube.frag.spv
 
 cl /I"C:\VulkanSDK\Anjaneya\Include" /c Vk.cpp /Fo"Vk.obj"
 
