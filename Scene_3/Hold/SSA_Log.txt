@@ -1,0 +1,1054 @@
+WinMain() --> Program started successfully
+Resize() --> Initialization yet not completed or failed
+fillInstanceExtensionNames() --> 1st call to vkEnumerateInstanceExtensionProperties() is succedded
+fillInstanceExtensionNames() --> 2nd call to vkEnumerateInstanceExtensionProperties() is succedded
+fillInstanceExtensionNames() --> Vulkan Instance Extension names = VK_KHR_device_group_creation
+fillInstanceExtensionNames() --> Vulkan Instance Extension names = VK_KHR_external_fence_capabilities
+fillInstanceExtensionNames() --> Vulkan Instance Extension names = VK_KHR_external_memory_capabilities
+fillInstanceExtensionNames() --> Vulkan Instance Extension names = VK_KHR_external_semaphore_capabilities
+fillInstanceExtensionNames() --> Vulkan Instance Extension names = VK_KHR_get_physical_device_properties2
+fillInstanceExtensionNames() --> Vulkan Instance Extension names = VK_KHR_get_surface_capabilities2
+fillInstanceExtensionNames() --> Vulkan Instance Extension names = VK_KHR_surface
+fillInstanceExtensionNames() --> Vulkan Instance Extension names = VK_KHR_surface_protected_capabilities
+fillInstanceExtensionNames() --> Vulkan Instance Extension names = VK_KHR_win32_surface
+fillInstanceExtensionNames() --> Vulkan Instance Extension names = VK_EXT_debug_report
+fillInstanceExtensionNames() --> Vulkan Instance Extension names = VK_EXT_debug_utils
+fillInstanceExtensionNames() --> Vulkan Instance Extension names = VK_EXT_surface_maintenance1
+fillInstanceExtensionNames() --> Vulkan Instance Extension names = VK_EXT_swapchain_colorspace
+fillInstanceExtensionNames() --> Vulkan Instance Extension names = VK_NV_external_memory_capabilities
+fillInstanceExtensionNames() --> Vulkan Instance Extension names = VK_KHR_portability_enumeration
+fillInstanceExtensionNames() --> Vulkan Instance Extension names = VK_LUNARG_direct_driver_loading
+fillInstanceExtensionNames() --> VK_KHR_SURFACE_EXTENSION_NAME found
+fillInstanceExtensionNames() --> VK_KHR_WIN32_SURFACE_EXTENSION_NAME found
+fillInstanceExtensionNames() --> VK_EXT_DEBUG_REPORT_EXTENSION_NAME found:: Validation is ON and required VK_EXT_DEBUG_REPORT_EXTENSION_NAME is supported
+fillInstanceExtensionNames() --> Enabled vulkan Instance extension Names = VK_KHR_surface
+fillInstanceExtensionNames() --> Enabled vulkan Instance extension Names = VK_KHR_win32_surface
+fillInstanceExtensionNames() --> Enabled vulkan Instance extension Names = VK_EXT_debug_report
+createVulkanInstance() --> fillInstanceExtensionNames() is succedded
+fillValidationLayerNames() --> 1st call to vkEnumerateInstanceLayerProperties() is succedded
+fillValidationLayerNames() --> 2nd call to vkEnumerateInstanceLayerProperties() is succedded
+fillValidationLayerNames() --> Vulkan Validation Layer names = VK_LAYER_NV_optimus
+fillValidationLayerNames() --> Vulkan Validation Layer names = VK_LAYER_NV_present
+fillValidationLayerNames() --> Vulkan Validation Layer names = VK_LAYER_NV_nomad_release_public_2025_3_0
+fillValidationLayerNames() --> Vulkan Validation Layer names = VK_LAYER_NV_GPU_Trace_release_public_2025_3_0
+fillValidationLayerNames() --> Vulkan Validation Layer names = VK_LAYER_NV_ngfx_capture_release_public_2025_3_0
+fillValidationLayerNames() --> Vulkan Validation Layer names = VK_LAYER_NV_shader_debugger_release_public_2025_3_0
+fillValidationLayerNames() --> Vulkan Validation Layer names = VK_LAYER_RENDERDOC_Capture
+fillValidationLayerNames() --> Vulkan Validation Layer names = VK_LAYER_OBS_HOOK
+fillValidationLayerNames() --> Vulkan Validation Layer names = VK_LAYER_LUNARG_api_dump
+fillValidationLayerNames() --> Vulkan Validation Layer names = VK_LAYER_LUNARG_gfxreconstruct
+fillValidationLayerNames() --> Vulkan Validation Layer names = VK_LAYER_KHRONOS_synchronization2
+fillValidationLayerNames() --> Vulkan Validation Layer names = VK_LAYER_KHRONOS_validation
+fillValidationLayerNames() --> Vulkan Validation Layer names = VK_LAYER_LUNARG_monitor
+fillValidationLayerNames() --> Vulkan Validation Layer names = VK_LAYER_LUNARG_screenshot
+fillValidationLayerNames() --> Vulkan Validation Layer names = VK_LAYER_KHRONOS_profiles
+fillValidationLayerNames() --> Vulkan Validation Layer names = VK_LAYER_KHRONOS_shader_object
+fillValidationLayerNames() --> Vulkan Validation Layer names = VK_LAYER_LUNARG_crash_diagnostic
+fillValidationLayerNames() --> VK_LAYER_KHRONOS_validation is supported
+fillValidationLayerNames() --> Enabled vulkan validation layer Names = VK_LAYER_KHRONOS_validation
+createVulkanInstance() --> fillValidationLayerNames() is succedded
+createVulkanInstance() --> vkCreateInstance:: vkCreateInstance succedded
+createValidationCallbackFunction() --> vkGetInstanceProcAddr() got vkCreateDebugReportCallbackEXT
+createValidationCallbackFunction() --> vkGetInstanceProcAddr() got vkDestroyDebugReportCallbackEXT
+createValidationCallbackFunction() --> vkCreateDebugReportCallbackEXT_fnptr() succeeded
+createVulkanInstance() --> createValidationCallbackFunction() is succedded
+Initialize() --> createVulkanInstance() is succedded
+getSupportedSurface() --> vkCreateWin32SurfaceKHR() is succedded
+Initialize() --> getSupportedSurface() is succedded
+getPhysicalDevice() --> 1st call to vkEnumeratePhysicalDevices() is succedded
+getPhysicalDevice() --> 2nd call to vkEnumeratePhysicalDevices() is succedded
+getPhysicalDevice() --> isQueueSurfaceSupported_array succedded to free
+getPhysicalDevice() --> vkQueueFamilyProperties_array succedded to free
+getPhysicalDevice() -->is succedded to select the required device with graphics enabled
+getPhysicalDevice() -->selected device supports tessellationShader
+getPhysicalDevice() -->selected device supports geometryShader
+Initialize() --> getPhysicalDevice() is succedded
+*******************VULKAN INFORMATION*********************
+Infomration of Device = 0
+apiVersion = 1.4.312
+DeviceName = NVIDIA GeForce RTX 4090
+DeviceType = Discrete GPU(dGPU)
+VendorId = 0x10de
+DeviceId = 0x2684
+
+****************END OF VULKAN INFORMATION********************
+printVkInfo() --> vkPhysicalDevice_array succedded to free
+Initialize() --> printVkInfo() is succedded
+fillDeviceExtensionNames() --> 1st call to vkEnumerateDeviceExtensionProperties() is succedded
+deviceExtensionCount is 251
+fillDeviceExtensionNames() --> 2nd call to vkEnumerateDeviceExtensionProperties() is succedded
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_16bit_storage
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_8bit_storage
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_acceleration_structure
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_bind_memory2
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_buffer_device_address
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_calibrated_timestamps
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_compute_shader_derivatives
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_cooperative_matrix
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_copy_commands2
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_create_renderpass2
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_dedicated_allocation
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_deferred_host_operations
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_depth_clamp_zero_one
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_depth_stencil_resolve
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_descriptor_update_template
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_device_group
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_draw_indirect_count
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_driver_properties
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_dynamic_rendering
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_dynamic_rendering_local_read
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_external_fence
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_external_fence_win32
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_external_memory
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_external_memory_win32
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_external_semaphore
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_external_semaphore_win32
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_format_feature_flags2
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_fragment_shader_barycentric
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_fragment_shading_rate
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_get_memory_requirements2
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_global_priority
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_image_format_list
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_imageless_framebuffer
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_index_type_uint8
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_line_rasterization
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_load_store_op_none
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_maintenance1
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_maintenance2
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_maintenance3
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_maintenance4
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_maintenance5
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_maintenance6
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_maintenance7
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_maintenance8
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_map_memory2
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_multiview
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_pipeline_binary
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_pipeline_executable_properties
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_pipeline_library
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_present_id
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_present_wait
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_push_descriptor
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_ray_query
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_ray_tracing_maintenance1
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_ray_tracing_pipeline
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_ray_tracing_position_fetch
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_relaxed_block_layout
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_sampler_mirror_clamp_to_edge
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_sampler_ycbcr_conversion
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_separate_depth_stencil_layouts
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_shader_atomic_int64
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_shader_bfloat16
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_shader_clock
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_shader_draw_parameters
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_shader_expect_assume
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_shader_float16_int8
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_shader_float_controls
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_shader_float_controls2
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_shader_integer_dot_product
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_shader_maximal_reconvergence
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_shader_non_semantic_info
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_shader_quad_control
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_shader_relaxed_extended_instruction
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_shader_subgroup_extended_types
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_shader_subgroup_rotate
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_shader_subgroup_uniform_control_flow
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_shader_terminate_invocation
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_spirv_1_4
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_storage_buffer_storage_class
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_swapchain
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_swapchain_mutable_format
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_synchronization2
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_timeline_semaphore
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_uniform_buffer_standard_layout
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_variable_pointers
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_vertex_attribute_divisor
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_video_decode_av1
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_video_decode_h264
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_video_decode_h265
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_video_decode_queue
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_video_decode_vp9
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_video_encode_av1
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_video_encode_h264
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_video_encode_h265
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_video_encode_quantization_map
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_video_encode_queue
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_video_maintenance1
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_video_maintenance2
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_video_queue
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_vulkan_memory_model
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_win32_keyed_mutex
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_workgroup_memory_explicit_layout
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_KHR_zero_initialize_workgroup_memory
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_4444_formats
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_attachment_feedback_loop_dynamic_state
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_attachment_feedback_loop_layout
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_blend_operation_advanced
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_border_color_swizzle
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_buffer_device_address
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_calibrated_timestamps
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_color_write_enable
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_conditional_rendering
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_conservative_rasterization
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_custom_border_color
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_depth_bias_control
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_depth_clamp_control
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_depth_clamp_zero_one
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_depth_clip_control
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_depth_clip_enable
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_depth_range_unrestricted
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_descriptor_buffer
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_descriptor_indexing
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_device_address_binding_report
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_device_fault
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_device_generated_commands
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_discard_rectangles
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_dynamic_rendering_unused_attachments
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_extended_dynamic_state
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_extended_dynamic_state2
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_extended_dynamic_state3
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_external_memory_host
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_fragment_shader_interlock
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_full_screen_exclusive
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_global_priority
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_global_priority_query
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_graphics_pipeline_library
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_hdr_metadata
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_host_image_copy
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_host_query_reset
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_image_2d_view_of_3d
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_image_robustness
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_image_sliced_view_of_3d
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_image_view_min_lod
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_index_type_uint8
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_inline_uniform_block
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_legacy_vertex_attributes
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_line_rasterization
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_load_store_op_none
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_memory_budget
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_memory_priority
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_mesh_shader
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_multi_draw
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_mutable_descriptor_type
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_nested_command_buffer
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_non_seamless_cube_map
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_opacity_micromap
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_pageable_device_local_memory
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_pci_bus_info
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_pipeline_creation_cache_control
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_pipeline_creation_feedback
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_pipeline_library_group_handles
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_pipeline_robustness
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_post_depth_coverage
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_present_mode_fifo_latest_ready
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_primitive_topology_list_restart
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_primitives_generated_query
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_private_data
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_provoking_vertex
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_queue_family_foreign
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_robustness2
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_sample_locations
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_sampler_filter_minmax
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_scalar_block_layout
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_separate_stencil_usage
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_shader_atomic_float
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_shader_demote_to_helper_invocation
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_shader_image_atomic_int64
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_shader_module_identifier
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_shader_object
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_shader_replicated_composites
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_shader_subgroup_ballot
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_shader_subgroup_vote
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_shader_viewport_index_layer
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_subgroup_size_control
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_swapchain_maintenance1
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_texel_buffer_alignment
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_tooling_info
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_transform_feedback
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_vertex_attribute_divisor
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_vertex_attribute_robustness
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_vertex_input_dynamic_state
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_ycbcr_2plane_444_formats
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_EXT_ycbcr_image_arrays
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_clip_space_w_scaling
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_cluster_acceleration_structure
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_compute_shader_derivatives
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_cooperative_matrix
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_cooperative_matrix2
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_cooperative_vector
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_copy_memory_indirect
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_corner_sampled_image
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_coverage_reduction_mode
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_cuda_kernel_launch
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_dedicated_allocation
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_dedicated_allocation_image_aliasing
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_descriptor_pool_overallocation
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_device_diagnostic_checkpoints
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_device_diagnostics_config
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_device_generated_commands
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_device_generated_commands_compute
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_disk_cache_utils
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_external_compute_queue
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_external_memory
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_external_memory_win32
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_fill_rectangle
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_fragment_coverage_to_color
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_fragment_shader_barycentric
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_fragment_shading_rate_enums
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_framebuffer_mixed_samples
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_geometry_shader_passthrough
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_inherited_viewport_scissor
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_internal_nvpresent
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_linear_color_attachment
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_low_latency
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_low_latency2
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_memory_decompression
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_mesh_shader
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_optical_flow
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_partitioned_acceleration_structure
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_present_metering
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_raw_access_chains
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_ray_tracing
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_ray_tracing_invocation_reorder
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_ray_tracing_motion_blur
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_representative_fragment_test
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_sample_mask_override_coverage
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_scissor_exclusive
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_shader_atomic_float16_vector
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_shader_image_footprint
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_shader_sm_builtins
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_shader_subgroup_partitioned
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_shading_rate_image
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_viewport_array2
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_viewport_swizzle
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NV_win32_keyed_mutex
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NVX_binary_import
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NVX_image_view_handle
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_NVX_multiview_per_view_attributes
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_AMD_buffer_marker
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_GOOGLE_hlsl_functionality1
+fillDeviceExtensionNames() --> Vulkan Device Extension names = VK_GOOGLE_user_type
+fillDeviceExtensionNames() --> VK_KHR_SWAPCHAIN_EXTENSION_NAME found
+fillDeviceExtensionNames() --> Enabled vulkan Device extension Names = VK_KHR_swapchain
+createVulkanDevice() --> fillDeviceExtensionNames() is succedded
+createVulkanDevice() --> vkCreateDevice() is succedded
+Initialize() --> createVulkanDevice() is succedded
+getDeviceQueue() --> vkGetDeviceQueue() is succedded
+getPhysicalDeviceSurfaceFormatAndColorSpace() --> 1st call to vkGetPhysicalDeviceSurfaceFormatsKHR() is succedded
+getPhysicalDeviceSurfaceFormatAndColorSpace() --> total formatCount are:: 5
+getPhysicalDeviceSurfaceFormatAndColorSpace() --> 2nd call to vkGetPhysicalDeviceSurfaceFormatsKHR() is succedded
+getPhysicalDeviceSurfaceFormatAndColorSpace() --> vkFormat_color is 44
+getPhysicalDeviceSurfaceFormatAndColorSpace() --> vkSurfaceFormatKHR_array is freed
+createSwapchain() --> getPhysicalDeviceSurfaceFormatAndColorSpace() is succedded
+createSwapchain() --> vkGetPhysicalDeviceSurfaceCapabilitiesKHR() is succedded
+createSwapchain() --> Swapchain image width X height = 784 X 561 
+getPhysicalDevicePresentMode() --> 1st call to vkGetPhysicalDeviceSurfacePresentModesKHR() is succedded
+getPhysicalDevicePresentMode() --> total presentModeCount are:: 5
+getPhysicalDevicePresentMode() --> 2nd call to vkGetPhysicalDeviceSurfacePresentModesKHR() is succedded
+getPhysicalDevicePresentMode() --> vkPresentModeKHR is VK_PRESENT_MODE_MAILBOX_KHR
+getPhysicalDevicePresentMode() --> vkPresentModeKHR_array is freed
+createSwapchain() --> getPhysicalDevicePresentMode() is succedded
+createSwapchain() --> vkCreateSwapchainKHR() is succedded
+Initialize() --> createSwapchain() is succedded
+createImagesAndImageViews() --> gives swapchainImagecount = 2
+createImagesAndImageViews() --> vkGetSwapchainImagesKHR() is succedded
+createImagesAndImageViews() --> 2nd call to vkGetSwapchainImagesKHR() is succedded
+createImagesAndImageViews() --> vkCreateImageViews() is succedded for iteration for 0
+createImagesAndImageViews() --> vkCreateImageViews() is succedded for iteration for 1
+createImagesAndImageViews() --> GetSupportedDepthFormat() is succedded
+createImagesAndImageViews() --> vkCreateImage() is succedded
+createImagesAndImageViews() --> vkAllocateMemory() is succedded
+createImagesAndImageViews() --> vkBindBufferMemory() is succedded
+createImagesAndImageViews() --> vkCreateImageView() is succedded
+Initialize() --> createImagesAndImageViews() is succedded
+createCommandPool() --> vkCreateCommandPool() is succedded 
+Initialize() --> createCommandPool() is succedded
+createCommandBuffers() --> vkAllocateCommandBuffers() is succedded for iteration 0
+createCommandBuffers() --> vkAllocateCommandBuffers() is succedded for iteration 1
+Initialize() --> createCommandBuffers() is succedded
+createVertexBuffer() --> vkCreateBuffer() is succedded for position 
+createVertexBuffer() --> vkAllocateMemory() is succedded for position 
+createVertexBuffer() --> vkBindBufferMemory() is succedded for position 
+createVertexBuffer() --> vkMapMemory() is succedded for position 
+createVertexBuffer() --> vkCreateBuffer() is succedded for texcoord
+createVertexBuffer() --> vkAllocateMemory() is succedded for texcoord
+createVertexBuffer() --> vkBindBufferMemory() is succedded for texcoord
+createVertexBuffer() --> vkMapMemory() is succedded for texcoord
+createVertexBuffer() --> vkCreateBuffer() is succedded for normal
+createVertexBuffer() --> vkAllocateMemory() is succedded for normal
+createVertexBuffer() --> vkBindBufferMemory() is succedded for normal
+createVertexBuffer() --> vkMapMemory() is succedded for normal
+createVertexBuffer() --> vkCreateBuffer() is succedded for position 
+createVertexBuffer() --> vkAllocateMemory() is succedded for position 
+createVertexBuffer() --> vkBindBufferMemory() is succedded for position 
+createVertexBuffer() --> vkMapMemory() is succedded for position 
+createVertexBuffer() --> vkCreateBuffer() is succedded for texcoord
+createVertexBuffer() --> vkAllocateMemory() is succedded for texcoord
+createVertexBuffer() --> vkBindBufferMemory() is succedded for texcoord
+createVertexBuffer() --> vkMapMemory() is succedded for texcoord
+createVertexBuffer() --> vkCreateBuffer() is succedded for normal
+createVertexBuffer() --> vkAllocateMemory() is succedded for normal
+createVertexBuffer() --> vkBindBufferMemory() is succedded for normal
+createVertexBuffer() --> vkMapMemory() is succedded for normal
+createVertexBuffer() --> vkCreateBuffer() is succedded for position 
+createVertexBuffer() --> vkAllocateMemory() is succedded for position 
+createVertexBuffer() --> vkBindBufferMemory() is succedded for position 
+createVertexBuffer() --> vkMapMemory() is succedded for position 
+createVertexBuffer() --> vkCreateBuffer() is succedded for texcoord
+createVertexBuffer() --> vkAllocateMemory() is succedded for texcoord
+createVertexBuffer() --> vkBindBufferMemory() is succedded for texcoord
+createVertexBuffer() --> vkMapMemory() is succedded for texcoord
+createVertexBuffer() --> vkCreateBuffer() is succedded for normal
+createVertexBuffer() --> vkAllocateMemory() is succedded for normal
+createVertexBuffer() --> vkBindBufferMemory() is succedded for normal
+createVertexBuffer() --> vkMapMemory() is succedded for normal
+createVertexBuffer() --> vkCreateBuffer() is succedded for position 
+createVertexBuffer() --> vkAllocateMemory() is succedded for position 
+createVertexBuffer() --> vkBindBufferMemory() is succedded for position 
+createVertexBuffer() --> vkMapMemory() is succedded for position 
+createVertexBuffer() --> vkCreateBuffer() is succedded for texcoord
+createVertexBuffer() --> vkAllocateMemory() is succedded for texcoord
+createVertexBuffer() --> vkBindBufferMemory() is succedded for texcoord
+createVertexBuffer() --> vkMapMemory() is succedded for texcoord
+createVertexBuffer() --> vkCreateBuffer() is succedded for normal
+createVertexBuffer() --> vkAllocateMemory() is succedded for normal
+createVertexBuffer() --> vkBindBufferMemory() is succedded for normal
+createVertexBuffer() --> vkMapMemory() is succedded for normal
+createVertexBuffer() --> vkCreateBuffer() is succedded for position 
+createVertexBuffer() --> vkAllocateMemory() is succedded for position 
+createVertexBuffer() --> vkBindBufferMemory() is succedded for position 
+createVertexBuffer() --> vkMapMemory() is succedded for position 
+createVertexBuffer() --> vkCreateBuffer() is succedded for texcoord
+createVertexBuffer() --> vkAllocateMemory() is succedded for texcoord
+createVertexBuffer() --> vkBindBufferMemory() is succedded for texcoord
+createVertexBuffer() --> vkMapMemory() is succedded for texcoord
+createVertexBuffer() --> vkCreateBuffer() is succedded for normal
+createVertexBuffer() --> vkAllocateMemory() is succedded for normal
+createVertexBuffer() --> vkBindBufferMemory() is succedded for normal
+createVertexBuffer() --> vkMapMemory() is succedded for normal
+createVertexBuffer() --> vkCreateBuffer() is succedded for position 
+createVertexBuffer() --> vkAllocateMemory() is succedded for position 
+createVertexBuffer() --> vkBindBufferMemory() is succedded for position 
+createVertexBuffer() --> vkMapMemory() is succedded for position 
+createVertexBuffer() --> vkCreateBuffer() is succedded for texcoord
+createVertexBuffer() --> vkAllocateMemory() is succedded for texcoord
+createVertexBuffer() --> vkBindBufferMemory() is succedded for texcoord
+createVertexBuffer() --> vkMapMemory() is succedded for texcoord
+createVertexBuffer() --> vkCreateBuffer() is succedded for normal
+createVertexBuffer() --> vkAllocateMemory() is succedded for normal
+createVertexBuffer() --> vkBindBufferMemory() is succedded for normal
+createVertexBuffer() --> vkMapMemory() is succedded for normal
+createVertexBuffer() --> vkCreateBuffer() is succedded for position 
+createVertexBuffer() --> vkAllocateMemory() is succedded for position 
+createVertexBuffer() --> vkBindBufferMemory() is succedded for position 
+createVertexBuffer() --> vkMapMemory() is succedded for position 
+createVertexBuffer() --> vkCreateBuffer() is succedded for texcoord
+createVertexBuffer() --> vkAllocateMemory() is succedded for texcoord
+createVertexBuffer() --> vkBindBufferMemory() is succedded for texcoord
+createVertexBuffer() --> vkMapMemory() is succedded for texcoord
+createVertexBuffer() --> vkCreateBuffer() is succedded for normal
+createVertexBuffer() --> vkAllocateMemory() is succedded for normal
+createVertexBuffer() --> vkBindBufferMemory() is succedded for normal
+createVertexBuffer() --> vkMapMemory() is succedded for normal
+createVertexBuffer() --> vkCreateBuffer() is succedded for position 
+createVertexBuffer() --> vkAllocateMemory() is succedded for position 
+createVertexBuffer() --> vkBindBufferMemory() is succedded for position 
+createVertexBuffer() --> vkMapMemory() is succedded for position 
+createVertexBuffer() --> vkCreateBuffer() is succedded for texcoord
+createVertexBuffer() --> vkAllocateMemory() is succedded for texcoord
+createVertexBuffer() --> vkBindBufferMemory() is succedded for texcoord
+createVertexBuffer() --> vkMapMemory() is succedded for texcoord
+createVertexBuffer() --> vkCreateBuffer() is succedded for normal
+createVertexBuffer() --> vkAllocateMemory() is succedded for normal
+createVertexBuffer() --> vkBindBufferMemory() is succedded for normal
+createVertexBuffer() --> vkMapMemory() is succedded for normal
+createVertexBuffer() --> vkCreateBuffer() is succedded for position 
+createVertexBuffer() --> vkAllocateMemory() is succedded for position 
+createVertexBuffer() --> vkBindBufferMemory() is succedded for position 
+createVertexBuffer() --> vkMapMemory() is succedded for position 
+createVertexBuffer() --> vkCreateBuffer() is succedded for texcoord
+createVertexBuffer() --> vkAllocateMemory() is succedded for texcoord
+createVertexBuffer() --> vkBindBufferMemory() is succedded for texcoord
+createVertexBuffer() --> vkMapMemory() is succedded for texcoord
+createVertexBuffer() --> vkCreateBuffer() is succedded for normal
+createVertexBuffer() --> vkAllocateMemory() is succedded for normal
+createVertexBuffer() --> vkBindBufferMemory() is succedded for normal
+createVertexBuffer() --> vkMapMemory() is succedded for normal
+Initialize() --> createVertexBuffer() is succedded
+createIndexBuffer() --> vkCreateBuffer() of index buffer is succedded
+createIndexBuffer() --> vkAllocateMemory() is succedded for index buffer
+createIndexBuffer() --> vkBindBufferMemory() is succedded for index buffer
+createIndexBuffer() --> vkMapMemory() is succedded for index buffer
+createIndexBuffer() --> vkCreateBuffer() of index buffer is succedded
+createIndexBuffer() --> vkAllocateMemory() is succedded for index buffer
+createIndexBuffer() --> vkBindBufferMemory() is succedded for index buffer
+createIndexBuffer() --> vkMapMemory() is succedded for index buffer
+createIndexBuffer() --> vkCreateBuffer() of index buffer is succedded
+createIndexBuffer() --> vkAllocateMemory() is succedded for index buffer
+createIndexBuffer() --> vkBindBufferMemory() is succedded for index buffer
+createIndexBuffer() --> vkMapMemory() is succedded for index buffer
+createIndexBuffer() --> vkCreateBuffer() of index buffer is succedded
+createIndexBuffer() --> vkAllocateMemory() is succedded for index buffer
+createIndexBuffer() --> vkBindBufferMemory() is succedded for index buffer
+createIndexBuffer() --> vkMapMemory() is succedded for index buffer
+createIndexBuffer() --> vkCreateBuffer() of index buffer is succedded
+createIndexBuffer() --> vkAllocateMemory() is succedded for index buffer
+createIndexBuffer() --> vkBindBufferMemory() is succedded for index buffer
+createIndexBuffer() --> vkMapMemory() is succedded for index buffer
+createIndexBuffer() --> vkCreateBuffer() of index buffer is succedded
+createIndexBuffer() --> vkAllocateMemory() is succedded for index buffer
+createIndexBuffer() --> vkBindBufferMemory() is succedded for index buffer
+createIndexBuffer() --> vkMapMemory() is succedded for index buffer
+createIndexBuffer() --> vkCreateBuffer() of index buffer is succedded
+createIndexBuffer() --> vkAllocateMemory() is succedded for index buffer
+createIndexBuffer() --> vkBindBufferMemory() is succedded for index buffer
+createIndexBuffer() --> vkMapMemory() is succedded for index buffer
+createIndexBuffer() --> vkCreateBuffer() of index buffer is succedded
+createIndexBuffer() --> vkAllocateMemory() is succedded for index buffer
+createIndexBuffer() --> vkBindBufferMemory() is succedded for index buffer
+createIndexBuffer() --> vkMapMemory() is succedded for index buffer
+createIndexBuffer() --> vkCreateBuffer() of index buffer is succedded
+createIndexBuffer() --> vkAllocateMemory() is succedded for index buffer
+createIndexBuffer() --> vkBindBufferMemory() is succedded for index buffer
+createIndexBuffer() --> vkMapMemory() is succedded for index buffer
+Initialize() --> createIndexBuffer() is succedded
+createTexture() --> bSun_texture is VK_TRUE
+createTexture() --> vkCreateBuffer() is succedded
+createTexture() --> vkAllocateMemory() is succedded
+createTexture() --> vkBindBufferMemory() is succedded
+createTexture() --> vkMapMemory() is succedded
+createTexture() --> stbi_image_free() Freeing of image data is succedded
+createTexture() --> vkCreateImage() is succedded
+createTexture() --> vkAllocateMemory() is succedded
+createTexture() --> vkBindImageMemory() is succedded
+createTexture() --> vkAllocateCommandBuffers() is succedded
+createTexture() --> vkBeginCommandBuffer() is succedded
+createTexture() --> vkEndCommandBuffer() is succedded
+createTexture() --> vkQueueSubmit() succeded
+createTexture() --> vkQueueWaitIdle() succeded
+createTexture() --> vkAllocateCommandBuffers() is succedded for buffer_to_image_copy
+createTexture() --> vkBeginCommandBuffer() is succedded for buffer_to_image_copy
+createTexture() --> vkEndCommandBuffer() is succedded for buffer_to_image_copy
+createTexture() --> vkQueueSubmit() is succedded for buffer_to_image_copycreateTexture() --> vkQueueWaitIdle() succeded for buffer_to_image_copy
+createTexture() --> vkAllocateCommandBuffers() is succedded
+createTexture() --> vkBeginCommandBuffer() is succedded
+createTexture() --> vkEndCommandBuffer() is succedded
+createTexture() --> vkQueueSubmit() succeded  for 2nd time in step 6 
+createTexture() --> vkQueueWaitIdle() succeded for 2nd time in step 6 
+createTexture() --> vkDestroyBuffer() is done for vkBuffer_stagingBuffer of setp 7
+createTexture() --> vkFreeMemory() is done for vkBuffer_stagingBuffer of setp 7
+createTexture() --> vkCreateImageView() is succedded
+createTexture() --> vkCreateSampler() is succedded
+Initialize() --> createTexture() is succedded for sun texture
+createTexture() --> bMercury_texture is VK_TRUE
+createTexture() --> vkCreateBuffer() is succedded
+createTexture() --> vkAllocateMemory() is succedded
+createTexture() --> vkBindBufferMemory() is succedded
+createTexture() --> vkMapMemory() is succedded
+createTexture() --> stbi_image_free() Freeing of image data is succedded
+createTexture() --> vkCreateImage() is succedded
+createTexture() --> vkAllocateMemory() is succedded
+createTexture() --> vkBindImageMemory() is succedded
+createTexture() --> vkAllocateCommandBuffers() is succedded
+createTexture() --> vkBeginCommandBuffer() is succedded
+createTexture() --> vkEndCommandBuffer() is succedded
+createTexture() --> vkQueueSubmit() succeded
+createTexture() --> vkQueueWaitIdle() succeded
+createTexture() --> vkAllocateCommandBuffers() is succedded for buffer_to_image_copy
+createTexture() --> vkBeginCommandBuffer() is succedded for buffer_to_image_copy
+createTexture() --> vkEndCommandBuffer() is succedded for buffer_to_image_copy
+createTexture() --> vkQueueSubmit() is succedded for buffer_to_image_copycreateTexture() --> vkQueueWaitIdle() succeded for buffer_to_image_copy
+createTexture() --> vkAllocateCommandBuffers() is succedded
+createTexture() --> vkBeginCommandBuffer() is succedded
+createTexture() --> vkEndCommandBuffer() is succedded
+createTexture() --> vkQueueSubmit() succeded  for 2nd time in step 6 
+createTexture() --> vkQueueWaitIdle() succeded for 2nd time in step 6 
+createTexture() --> vkDestroyBuffer() is done for vkBuffer_stagingBuffer of setp 7
+createTexture() --> vkFreeMemory() is done for vkBuffer_stagingBuffer of setp 7
+createTexture() --> vkCreateImageView() is succedded
+createTexture() --> vkCreateSampler() is succedded
+Initialize() --> createTexture() is succedded for mercury texture
+createTexture() --> bVenus_texture is VK_TRUE
+createTexture() --> vkCreateBuffer() is succedded
+createTexture() --> vkAllocateMemory() is succedded
+createTexture() --> vkBindBufferMemory() is succedded
+createTexture() --> vkMapMemory() is succedded
+createTexture() --> stbi_image_free() Freeing of image data is succedded
+createTexture() --> vkCreateImage() is succedded
+createTexture() --> vkAllocateMemory() is succedded
+createTexture() --> vkBindImageMemory() is succedded
+createTexture() --> vkAllocateCommandBuffers() is succedded
+createTexture() --> vkBeginCommandBuffer() is succedded
+createTexture() --> vkEndCommandBuffer() is succedded
+createTexture() --> vkQueueSubmit() succeded
+createTexture() --> vkQueueWaitIdle() succeded
+createTexture() --> vkAllocateCommandBuffers() is succedded for buffer_to_image_copy
+createTexture() --> vkBeginCommandBuffer() is succedded for buffer_to_image_copy
+createTexture() --> vkEndCommandBuffer() is succedded for buffer_to_image_copy
+createTexture() --> vkQueueSubmit() is succedded for buffer_to_image_copycreateTexture() --> vkQueueWaitIdle() succeded for buffer_to_image_copy
+createTexture() --> vkAllocateCommandBuffers() is succedded
+createTexture() --> vkBeginCommandBuffer() is succedded
+createTexture() --> vkEndCommandBuffer() is succedded
+createTexture() --> vkQueueSubmit() succeded  for 2nd time in step 6 
+createTexture() --> vkQueueWaitIdle() succeded for 2nd time in step 6 
+createTexture() --> vkDestroyBuffer() is done for vkBuffer_stagingBuffer of setp 7
+createTexture() --> vkFreeMemory() is done for vkBuffer_stagingBuffer of setp 7
+createTexture() --> vkCreateImageView() is succedded
+createTexture() --> vkCreateSampler() is succedded
+Initialize() --> createTexture() is succedded for venus texture
+createTexture() --> bEarth_texture is VK_TRUE
+createTexture() --> vkCreateBuffer() is succedded
+createTexture() --> vkAllocateMemory() is succedded
+createTexture() --> vkBindBufferMemory() is succedded
+createTexture() --> vkMapMemory() is succedded
+createTexture() --> stbi_image_free() Freeing of image data is succedded
+createTexture() --> vkCreateImage() is succedded
+createTexture() --> vkAllocateMemory() is succedded
+createTexture() --> vkBindImageMemory() is succedded
+createTexture() --> vkAllocateCommandBuffers() is succedded
+createTexture() --> vkBeginCommandBuffer() is succedded
+createTexture() --> vkEndCommandBuffer() is succedded
+createTexture() --> vkQueueSubmit() succeded
+createTexture() --> vkQueueWaitIdle() succeded
+createTexture() --> vkAllocateCommandBuffers() is succedded for buffer_to_image_copy
+createTexture() --> vkBeginCommandBuffer() is succedded for buffer_to_image_copy
+createTexture() --> vkEndCommandBuffer() is succedded for buffer_to_image_copy
+createTexture() --> vkQueueSubmit() is succedded for buffer_to_image_copycreateTexture() --> vkQueueWaitIdle() succeded for buffer_to_image_copy
+createTexture() --> vkAllocateCommandBuffers() is succedded
+createTexture() --> vkBeginCommandBuffer() is succedded
+createTexture() --> vkEndCommandBuffer() is succedded
+createTexture() --> vkQueueSubmit() succeded  for 2nd time in step 6 
+createTexture() --> vkQueueWaitIdle() succeded for 2nd time in step 6 
+createTexture() --> vkDestroyBuffer() is done for vkBuffer_stagingBuffer of setp 7
+createTexture() --> vkFreeMemory() is done for vkBuffer_stagingBuffer of setp 7
+createTexture() --> vkCreateImageView() is succedded
+createTexture() --> vkCreateSampler() is succedded
+Initialize() --> createTexture() is succedded for earth texture
+createTexture() --> bMars_texture is VK_TRUE
+createTexture() --> vkCreateBuffer() is succedded
+createTexture() --> vkAllocateMemory() is succedded
+createTexture() --> vkBindBufferMemory() is succedded
+createTexture() --> vkMapMemory() is succedded
+createTexture() --> stbi_image_free() Freeing of image data is succedded
+createTexture() --> vkCreateImage() is succedded
+createTexture() --> vkAllocateMemory() is succedded
+createTexture() --> vkBindImageMemory() is succedded
+createTexture() --> vkAllocateCommandBuffers() is succedded
+createTexture() --> vkBeginCommandBuffer() is succedded
+createTexture() --> vkEndCommandBuffer() is succedded
+createTexture() --> vkQueueSubmit() succeded
+createTexture() --> vkQueueWaitIdle() succeded
+createTexture() --> vkAllocateCommandBuffers() is succedded for buffer_to_image_copy
+createTexture() --> vkBeginCommandBuffer() is succedded for buffer_to_image_copy
+createTexture() --> vkEndCommandBuffer() is succedded for buffer_to_image_copy
+createTexture() --> vkQueueSubmit() is succedded for buffer_to_image_copycreateTexture() --> vkQueueWaitIdle() succeded for buffer_to_image_copy
+createTexture() --> vkAllocateCommandBuffers() is succedded
+createTexture() --> vkBeginCommandBuffer() is succedded
+createTexture() --> vkEndCommandBuffer() is succedded
+createTexture() --> vkQueueSubmit() succeded  for 2nd time in step 6 
+createTexture() --> vkQueueWaitIdle() succeded for 2nd time in step 6 
+createTexture() --> vkDestroyBuffer() is done for vkBuffer_stagingBuffer of setp 7
+createTexture() --> vkFreeMemory() is done for vkBuffer_stagingBuffer of setp 7
+createTexture() --> vkCreateImageView() is succedded
+createTexture() --> vkCreateSampler() is succedded
+Initialize() --> createTexture() is succedded for mars texture
+createTexture() --> bJupitor_texture is VK_TRUE
+createTexture() --> vkCreateBuffer() is succedded
+createTexture() --> vkAllocateMemory() is succedded
+createTexture() --> vkBindBufferMemory() is succedded
+createTexture() --> vkMapMemory() is succedded
+createTexture() --> stbi_image_free() Freeing of image data is succedded
+createTexture() --> vkCreateImage() is succedded
+createTexture() --> vkAllocateMemory() is succedded
+createTexture() --> vkBindImageMemory() is succedded
+createTexture() --> vkAllocateCommandBuffers() is succedded
+createTexture() --> vkBeginCommandBuffer() is succedded
+createTexture() --> vkEndCommandBuffer() is succedded
+createTexture() --> vkQueueSubmit() succeded
+createTexture() --> vkQueueWaitIdle() succeded
+createTexture() --> vkAllocateCommandBuffers() is succedded for buffer_to_image_copy
+createTexture() --> vkBeginCommandBuffer() is succedded for buffer_to_image_copy
+createTexture() --> vkEndCommandBuffer() is succedded for buffer_to_image_copy
+createTexture() --> vkQueueSubmit() is succedded for buffer_to_image_copycreateTexture() --> vkQueueWaitIdle() succeded for buffer_to_image_copy
+createTexture() --> vkAllocateCommandBuffers() is succedded
+createTexture() --> vkBeginCommandBuffer() is succedded
+createTexture() --> vkEndCommandBuffer() is succedded
+createTexture() --> vkQueueSubmit() succeded  for 2nd time in step 6 
+createTexture() --> vkQueueWaitIdle() succeded for 2nd time in step 6 
+createTexture() --> vkDestroyBuffer() is done for vkBuffer_stagingBuffer of setp 7
+createTexture() --> vkFreeMemory() is done for vkBuffer_stagingBuffer of setp 7
+createTexture() --> vkCreateImageView() is succedded
+createTexture() --> vkCreateSampler() is succedded
+Initialize() --> createTexture() is succedded for jupitor texture
+createTexture() --> bSaturn_texture is VK_TRUE
+createTexture() --> vkCreateBuffer() is succedded
+createTexture() --> vkAllocateMemory() is succedded
+createTexture() --> vkBindBufferMemory() is succedded
+createTexture() --> vkMapMemory() is succedded
+createTexture() --> stbi_image_free() Freeing of image data is succedded
+createTexture() --> vkCreateImage() is succedded
+createTexture() --> vkAllocateMemory() is succedded
+createTexture() --> vkBindImageMemory() is succedded
+createTexture() --> vkAllocateCommandBuffers() is succedded
+createTexture() --> vkBeginCommandBuffer() is succedded
+createTexture() --> vkEndCommandBuffer() is succedded
+createTexture() --> vkQueueSubmit() succeded
+createTexture() --> vkQueueWaitIdle() succeded
+createTexture() --> vkAllocateCommandBuffers() is succedded for buffer_to_image_copy
+createTexture() --> vkBeginCommandBuffer() is succedded for buffer_to_image_copy
+createTexture() --> vkEndCommandBuffer() is succedded for buffer_to_image_copy
+createTexture() --> vkQueueSubmit() is succedded for buffer_to_image_copycreateTexture() --> vkQueueWaitIdle() succeded for buffer_to_image_copy
+createTexture() --> vkAllocateCommandBuffers() is succedded
+createTexture() --> vkBeginCommandBuffer() is succedded
+createTexture() --> vkEndCommandBuffer() is succedded
+createTexture() --> vkQueueSubmit() succeded  for 2nd time in step 6 
+createTexture() --> vkQueueWaitIdle() succeded for 2nd time in step 6 
+createTexture() --> vkDestroyBuffer() is done for vkBuffer_stagingBuffer of setp 7
+createTexture() --> vkFreeMemory() is done for vkBuffer_stagingBuffer of setp 7
+createTexture() --> vkCreateImageView() is succedded
+createTexture() --> vkCreateSampler() is succedded
+Initialize() --> createTexture() is succedded for saturn texture
+createTexture() --> bUranus_texture is VK_TRUE
+createTexture() --> vkCreateBuffer() is succedded
+createTexture() --> vkAllocateMemory() is succedded
+createTexture() --> vkBindBufferMemory() is succedded
+createTexture() --> vkMapMemory() is succedded
+createTexture() --> stbi_image_free() Freeing of image data is succedded
+createTexture() --> vkCreateImage() is succedded
+createTexture() --> vkAllocateMemory() is succedded
+createTexture() --> vkBindImageMemory() is succedded
+createTexture() --> vkAllocateCommandBuffers() is succedded
+createTexture() --> vkBeginCommandBuffer() is succedded
+createTexture() --> vkEndCommandBuffer() is succedded
+createTexture() --> vkQueueSubmit() succeded
+createTexture() --> vkQueueWaitIdle() succeded
+createTexture() --> vkAllocateCommandBuffers() is succedded for buffer_to_image_copy
+createTexture() --> vkBeginCommandBuffer() is succedded for buffer_to_image_copy
+createTexture() --> vkEndCommandBuffer() is succedded for buffer_to_image_copy
+createTexture() --> vkQueueSubmit() is succedded for buffer_to_image_copycreateTexture() --> vkQueueWaitIdle() succeded for buffer_to_image_copy
+createTexture() --> vkAllocateCommandBuffers() is succedded
+createTexture() --> vkBeginCommandBuffer() is succedded
+createTexture() --> vkEndCommandBuffer() is succedded
+createTexture() --> vkQueueSubmit() succeded  for 2nd time in step 6 
+createTexture() --> vkQueueWaitIdle() succeded for 2nd time in step 6 
+createTexture() --> vkDestroyBuffer() is done for vkBuffer_stagingBuffer of setp 7
+createTexture() --> vkFreeMemory() is done for vkBuffer_stagingBuffer of setp 7
+createTexture() --> vkCreateImageView() is succedded
+createTexture() --> vkCreateSampler() is succedded
+Initialize() --> createTexture() is succedded for uranus texture
+createTexture() --> bNeptune_texture is VK_TRUE
+createTexture() --> vkCreateBuffer() is succedded
+createTexture() --> vkAllocateMemory() is succedded
+createTexture() --> vkBindBufferMemory() is succedded
+createTexture() --> vkMapMemory() is succedded
+createTexture() --> stbi_image_free() Freeing of image data is succedded
+createTexture() --> vkCreateImage() is succedded
+createTexture() --> vkAllocateMemory() is succedded
+createTexture() --> vkBindImageMemory() is succedded
+createTexture() --> vkAllocateCommandBuffers() is succedded
+createTexture() --> vkBeginCommandBuffer() is succedded
+createTexture() --> vkEndCommandBuffer() is succedded
+createTexture() --> vkQueueSubmit() succeded
+createTexture() --> vkQueueWaitIdle() succeded
+createTexture() --> vkAllocateCommandBuffers() is succedded for buffer_to_image_copy
+createTexture() --> vkBeginCommandBuffer() is succedded for buffer_to_image_copy
+createTexture() --> vkEndCommandBuffer() is succedded for buffer_to_image_copy
+createTexture() --> vkQueueSubmit() is succedded for buffer_to_image_copycreateTexture() --> vkQueueWaitIdle() succeded for buffer_to_image_copy
+createTexture() --> vkAllocateCommandBuffers() is succedded
+createTexture() --> vkBeginCommandBuffer() is succedded
+createTexture() --> vkEndCommandBuffer() is succedded
+createTexture() --> vkQueueSubmit() succeded  for 2nd time in step 6 
+createTexture() --> vkQueueWaitIdle() succeded for 2nd time in step 6 
+createTexture() --> vkDestroyBuffer() is done for vkBuffer_stagingBuffer of setp 7
+createTexture() --> vkFreeMemory() is done for vkBuffer_stagingBuffer of setp 7
+createTexture() --> vkCreateImageView() is succedded
+createTexture() --> vkCreateSampler() is succedded
+Initialize() --> createTexture() is succedded for neptune texture
+createUniformBuffer() --> vkCreateBuffer() is succedded
+createUniformBuffer() --> vkAllocateMemory() is succedded
+createUniformBuffer() --> vkBindBufferMemory() is succedded
+createUniformBuffer() --> vkCreateBuffer() is succedded
+createUniformBuffer() --> vkAllocateMemory() is succedded
+createUniformBuffer() --> vkBindBufferMemory() is succedded
+createUniformBuffer() --> vkCreateBuffer() is succedded
+createUniformBuffer() --> vkAllocateMemory() is succedded
+createUniformBuffer() --> vkBindBufferMemory() is succedded
+createUniformBuffer() --> vkCreateBuffer() is succedded
+createUniformBuffer() --> vkAllocateMemory() is succedded
+createUniformBuffer() --> vkBindBufferMemory() is succedded
+createUniformBuffer() --> vkCreateBuffer() is succedded
+createUniformBuffer() --> vkAllocateMemory() is succedded
+createUniformBuffer() --> vkBindBufferMemory() is succedded
+createUniformBuffer() --> vkCreateBuffer() is succedded
+createUniformBuffer() --> vkAllocateMemory() is succedded
+createUniformBuffer() --> vkBindBufferMemory() is succedded
+createUniformBuffer() --> vkCreateBuffer() is succedded
+createUniformBuffer() --> vkAllocateMemory() is succedded
+createUniformBuffer() --> vkBindBufferMemory() is succedded
+createUniformBuffer() --> vkCreateBuffer() is succedded
+createUniformBuffer() --> vkAllocateMemory() is succedded
+createUniformBuffer() --> vkBindBufferMemory() is succedded
+createUniformBuffer() --> vkCreateBuffer() is succedded
+createUniformBuffer() --> vkAllocateMemory() is succedded
+createUniformBuffer() --> vkBindBufferMemory() is succedded
+createUniformBuffer() --> updateUniformBuffer() is succedded
+Initialize() --> createUniformBuffer() is succedded
+createShaders() --> fopen() succedded to open shader.vert.spv
+createShaders() --> fread() succedded to read shader.vert.spv
+createShaders() --> vkCreateShaderModule() is succedded
+createShaders() --> vertex Shader module successfully created
+createShaders() --> fopen() succedded to open shader.frag.spv
+createShaders() --> fread() succedded to read shader.frag.spv
+createShaders() --> vkCreateShaderModule() is succedded
+createShaders() --> fragment Shader module successfully created
+Initialize() --> createShaders() is succedded
+createDescriptorSetLayout() --> vkCreateDescriptorSetLayour() is succedded
+Initialize() --> createDescriptorSetLayout() is succedded
+createPipelineLayout() --> vkCreatePipelineLayout() is succedded
+Initialize() --> createPipelineLayout() is succedded
+createDescriptorPool() --> vkCreateDescriptorPool() is succedded
+Initialize() --> createDescriptorPool() is succedded
+createDescriptorSet() --> vkAllocateDescriptorSets() is succedded for sun
+createDescriptorSet() --> vkUpdateDescriptorSets() is succedded
+createDescriptorSet() --> vkAllocateDescriptorSets() is succedded for mercury
+createDescriptorSet() --> vkUpdateDescriptorSets() is succedded
+createDescriptorSet() --> vkAllocateDescriptorSets() is succedded venus
+createDescriptorSet() --> vkUpdateDescriptorSets() is succedded
+createDescriptorSet() --> vkAllocateDescriptorSets() is succedded for earth
+createDescriptorSet() --> vkUpdateDescriptorSets() is succedded
+createDescriptorSet() --> vkAllocateDescriptorSets() is succedded for mars
+createDescriptorSet() --> vkUpdateDescriptorSets() is succedded
+createDescriptorSet() --> vkAllocateDescriptorSets() is succedded for jupitor
+createDescriptorSet() --> vkUpdateDescriptorSets() is succedded
+createDescriptorSet() --> vkAllocateDescriptorSets() is succedded
+createDescriptorSet() --> vkUpdateDescriptorSets() is succedded
+createDescriptorSet() --> vkAllocateDescriptorSets() is succedded
+createDescriptorSet() --> vkUpdateDescriptorSets() is succedded
+createDescriptorSet() --> vkAllocateDescriptorSets() is succedded
+createDescriptorSet() --> vkUpdateDescriptorSets() is succedded
+Initialize() --> createDescriptorPool() is succedded
+createRenderPass() --> vkCreateRenderPass() is succedded
+Initialize() --> createRenderPass() is succedded
+createPipeline() --> vkCreatePipelineCache() is succedded
+createPipeline() --> vkCreateGraphicsPipelines() is succedded
+Initialize() --> createPipeline() is succedded
+createFrameBuffers() --> vkCreateFramebuffer() is succedded for iteration 0
+createFrameBuffers() --> vkCreateFramebuffer() is succedded for iteration 1
+Initialize() --> createFrameBuffers() is succedded
+createSemaphores() --> vkCreateSemaphore() is succedded for vkSemaphore_backBuffer
+createSemaphores() --> vkCreateSemaphore() is succedded for vkSemaphore_renderComplete
+Initialize() --> createSemaphores() is succedded
+createFences() --> vkCreateFence() is succedded for 0 iteration
+createFences() --> vkCreateFence() is succedded for 1 iteration
+Initialize() --> createFences() is succedded
+buildCommandBuffers() --> vkResetCommandBuffer() is succedded for 0 iteration
+buildCommandBuffers() --> vkBeginCommandBuffer() is succedded for 0 iteration
+buildCommandBuffers() --> vkEndCommandBuffer() is succedded for 0 iteration
+buildCommandBuffers() --> vkResetCommandBuffer() is succedded for 1 iteration
+buildCommandBuffers() --> vkBeginCommandBuffer() is succedded for 1 iteration
+buildCommandBuffers() --> vkEndCommandBuffer() is succedded for 1 iteration
+Initialize() --> buildCommandBuffers() is succedded
+Initialize() --> Initialization is completed successfully
+WinMain() --> Initialize() is succedded
+Resize() --> vkDeviceWaitIdle() is done
+Resize() --> vkFrameBuffer_array() is done
+Resize() --> vkFreeCommandBuffers() is done
+Resize() --> vkFreeCommandBuffers() is done
+Resize() --> vkCommandBuffer_array is freed
+Resize() --> vkDestroyPipeline() is done
+Resize() --> vkPipelineLayout() is done
+Resize() --> vkDestoryImageView() is done
+Resize() --> vkDestoryImageView() is done
+Resize() --> swapchainImageView_array is freed
+Resize() --> swapchainImage_array is freed
+Resize() --> vkSwapchainCreateInfoKHR() is done
+getPhysicalDeviceSurfaceFormatAndColorSpace() --> 1st call to vkGetPhysicalDeviceSurfaceFormatsKHR() is succedded
+getPhysicalDeviceSurfaceFormatAndColorSpace() --> total formatCount are:: 5
+getPhysicalDeviceSurfaceFormatAndColorSpace() --> 2nd call to vkGetPhysicalDeviceSurfaceFormatsKHR() is succedded
+getPhysicalDeviceSurfaceFormatAndColorSpace() --> vkFormat_color is 44
+getPhysicalDeviceSurfaceFormatAndColorSpace() --> vkSurfaceFormatKHR_array is freed
+createSwapchain() --> getPhysicalDeviceSurfaceFormatAndColorSpace() is succedded
+createSwapchain() --> vkGetPhysicalDeviceSurfaceCapabilitiesKHR() is succedded
+createSwapchain() --> Swapchain image width X height = 784 X 561 
+getPhysicalDevicePresentMode() --> 1st call to vkGetPhysicalDeviceSurfacePresentModesKHR() is succedded
+getPhysicalDevicePresentMode() --> total presentModeCount are:: 5
+getPhysicalDevicePresentMode() --> 2nd call to vkGetPhysicalDeviceSurfacePresentModesKHR() is succedded
+getPhysicalDevicePresentMode() --> vkPresentModeKHR is VK_PRESENT_MODE_MAILBOX_KHR
+getPhysicalDevicePresentMode() --> vkPresentModeKHR_array is freed
+createSwapchain() --> getPhysicalDevicePresentMode() is succedded
+createSwapchain() --> vkCreateSwapchainKHR() is succedded
+createImagesAndImageViews() --> gives swapchainImagecount = 2
+createImagesAndImageViews() --> vkGetSwapchainImagesKHR() is succedded
+createImagesAndImageViews() --> 2nd call to vkGetSwapchainImagesKHR() is succedded
+createImagesAndImageViews() --> vkCreateImageViews() is succedded for iteration for 0
+createImagesAndImageViews() --> vkCreateImageViews() is succedded for iteration for 1
+createImagesAndImageViews() --> GetSupportedDepthFormat() is succedded
+createImagesAndImageViews() --> vkCreateImage() is succedded
+createImagesAndImageViews() --> vkAllocateMemory() is succedded
+createImagesAndImageViews() --> vkBindBufferMemory() is succedded
+createImagesAndImageViews() --> vkCreateImageView() is succedded
+createRenderPass() --> vkCreateRenderPass() is succedded
+createPipelineLayout() --> vkCreatePipelineLayout() is succedded
+createPipeline() --> vkCreatePipelineCache() is succedded
+createPipeline() --> vkCreateGraphicsPipelines() is succedded
+createFrameBuffers() --> vkCreateFramebuffer() is succedded for iteration 0
+createFrameBuffers() --> vkCreateFramebuffer() is succedded for iteration 1
+createCommandBuffers() --> vkAllocateCommandBuffers() is succedded for iteration 0
+createCommandBuffers() --> vkAllocateCommandBuffers() is succedded for iteration 1
+buildCommandBuffers() --> vkResetCommandBuffer() is succedded for 0 iteration
+buildCommandBuffers() --> vkBeginCommandBuffer() is succedded for 0 iteration
+buildCommandBuffers() --> vkEndCommandBuffer() is succedded for 0 iteration
+buildCommandBuffers() --> vkResetCommandBuffer() is succedded for 1 iteration
+buildCommandBuffers() --> vkBeginCommandBuffer() is succedded for 1 iteration
+buildCommandBuffers() --> vkEndCommandBuffer() is succedded for 1 iteration
+Uninitialize() --> vkDeviceWaitIdle() is done
+Uninitialize() --> vkDestroyFence() is done
+Uninitialize() --> vkDestroySemaphore() for vkSemaphore_renderComplete is done
+Uninitialize() --> vkDestroySemaphore() for vkSemaphore_backBuffer is done
+Uninitialize() --> vkDestroyDescriptorPool() is done
+Uninitialize() --> vkDestroyDescriptorSetLayout() is done
+Uninitialize() --> vkDestroyBuffer() for uniformData[0]
+Uninitialize() --> vkFreeMemory() for uniformData[0]
+Uninitialize() --> vkDestroyBuffer() for uniformData[1]
+Uninitialize() --> vkFreeMemory() for uniformData[1]
+Uninitialize() --> vkDestroyBuffer() for uniformData[2]
+Uninitialize() --> vkFreeMemory() for uniformData[2]
+Uninitialize() --> vkDestroyBuffer() for uniformData[3]
+Uninitialize() --> vkFreeMemory() for uniformData[3]
+Uninitialize() --> vkDestroyBuffer() for uniformData[4]
+Uninitialize() --> vkFreeMemory() for uniformData[4]
+Uninitialize() --> vkDestroyBuffer() for uniformData[5]
+Uninitialize() --> vkFreeMemory() for uniformData[5]
+Uninitialize() --> vkDestroyBuffer() for uniformData[6]
+Uninitialize() --> vkFreeMemory() for uniformData[6]
+Uninitialize() --> vkDestroyBuffer() for uniformData[7]
+Uninitialize() --> vkFreeMemory() for uniformData[7]
+Uninitialize() --> vkDestroyBuffer() for uniformData[8]
+Uninitialize() --> vkFreeMemory() for uniformData[8]
+Uninitialize() --> vkDestroySampler() planet[0]
+Uninitialize() --> vkDestroyImageView() planet[0]
+Uninitialize() --> vkDestroySampler() planet[1]
+Uninitialize() --> vkDestroyImageView() planet[1]
+Uninitialize() --> vkDestroySampler() planet[2]
+Uninitialize() --> vkDestroyImageView() planet[2]
+Uninitialize() --> vkDestroySampler() planet[3]
+Uninitialize() --> vkDestroyImageView() planet[3]
+Uninitialize() --> vkDestroySampler() planet[4]
+Uninitialize() --> vkDestroyImageView() planet[4]
+Uninitialize() --> vkDestroySampler() planet[5]
+Uninitialize() --> vkDestroyImageView() planet[5]
+Uninitialize() --> vkDestroySampler() planet[6]
+Uninitialize() --> vkDestroyImageView() planet[6]
+Uninitialize() --> vkDestroySampler() planet[7]
+Uninitialize() --> vkDestroyImageView() planet[7]
+Uninitialize() --> vkDestroySampler() planet[8]
+Uninitialize() --> vkDestroyImageView() planet[8]
+Uninitialize() --> vkDestroyImage() planet[0]
+Uninitialize() --> vkFreeMemory() planet[0]
+Uninitialize() --> vkDestroyImage() planet[1]
+Uninitialize() --> vkFreeMemory() planet[1]
+Uninitialize() --> vkDestroyImage() planet[2]
+Uninitialize() --> vkFreeMemory() planet[2]
+Uninitialize() --> vkDestroyImage() planet[3]
+Uninitialize() --> vkFreeMemory() planet[3]
+Uninitialize() --> vkDestroyImage() planet[4]
+Uninitialize() --> vkFreeMemory() planet[4]
+Uninitialize() --> vkDestroyImage() planet[5]
+Uninitialize() --> vkFreeMemory() planet[5]
+Uninitialize() --> vkDestroyImage() planet[6]
+Uninitialize() --> vkFreeMemory() planet[6]
+Uninitialize() --> vkDestroyImage() planet[7]
+Uninitialize() --> vkFreeMemory() planet[7]
+Uninitialize() --> vkDestroyImage() planet[8]
+Uninitialize() --> vkFreeMemory() planet[8]
+Uninitialize() --> vkDestroyBuffer() for vertexData_position[0]
+Uninitialize() --> vkFreeMemory() for vertexData_position[0]
+Uninitialize() --> vkDestroyBuffer() for vertexData_position[1]
+Uninitialize() --> vkFreeMemory() for vertexData_position[1]
+Uninitialize() --> vkDestroyBuffer() for vertexData_position[2]
+Uninitialize() --> vkFreeMemory() for vertexData_position[2]
+Uninitialize() --> vkDestroyBuffer() for vertexData_position[3]
+Uninitialize() --> vkFreeMemory() for vertexData_position[3]
+Uninitialize() --> vkDestroyBuffer() for vertexData_position[4]
+Uninitialize() --> vkFreeMemory() for vertexData_position[4]
+Uninitialize() --> vkDestroyBuffer() for vertexData_position[5]
+Uninitialize() --> vkFreeMemory() for vertexData_position[5]
+Uninitialize() --> vkDestroyBuffer() for vertexData_position[6]
+Uninitialize() --> vkFreeMemory() for vertexData_position[6]
+Uninitialize() --> vkDestroyBuffer() for vertexData_position[7]
+Uninitialize() --> vkFreeMemory() for vertexData_position[7]
+Uninitialize() --> vkDestroyBuffer() for vertexData_position[8]
+Uninitialize() --> vkFreeMemory() for vertexData_position[8]
+Uninitialize() --> vkDestroyBuffer() for vertexData_texcoord[0]
+Uninitialize() --> vkFreeMemory() for vertexData_texcoord[0]
+Uninitialize() --> vkDestroyBuffer() for vertexData_texcoord[1]
+Uninitialize() --> vkFreeMemory() for vertexData_texcoord[1]
+Uninitialize() --> vkDestroyBuffer() for vertexData_texcoord[2]
+Uninitialize() --> vkFreeMemory() for vertexData_texcoord[2]
+Uninitialize() --> vkDestroyBuffer() for vertexData_texcoord[3]
+Uninitialize() --> vkFreeMemory() for vertexData_texcoord[3]
+Uninitialize() --> vkDestroyBuffer() for vertexData_texcoord[4]
+Uninitialize() --> vkFreeMemory() for vertexData_texcoord[4]
+Uninitialize() --> vkDestroyBuffer() for vertexData_texcoord[5]
+Uninitialize() --> vkFreeMemory() for vertexData_texcoord[5]
+Uninitialize() --> vkDestroyBuffer() for vertexData_texcoord[6]
+Uninitialize() --> vkFreeMemory() for vertexData_texcoord[6]
+Uninitialize() --> vkDestroyBuffer() for vertexData_texcoord[7]
+Uninitialize() --> vkFreeMemory() for vertexData_texcoord[7]
+Uninitialize() --> vkDestroyBuffer() for vertexData_texcoord[8]
+Uninitialize() --> vkFreeMemory() for vertexData_texcoord[8]
+Uninitialize() --> vkDestroyBuffer() for vertexData_normal[0]
+Uninitialize() --> vkFreeMemory() for vertexData_normal[0]
+Uninitialize() --> vkDestroyBuffer() for vertexData_normal[1]
+Uninitialize() --> vkFreeMemory() for vertexData_normal[1]
+Uninitialize() --> vkDestroyBuffer() for vertexData_normal[2]
+Uninitialize() --> vkFreeMemory() for vertexData_normal[2]
+Uninitialize() --> vkDestroyBuffer() for vertexData_normal[3]
+Uninitialize() --> vkFreeMemory() for vertexData_normal[3]
+Uninitialize() --> vkDestroyBuffer() for vertexData_normal[4]
+Uninitialize() --> vkFreeMemory() for vertexData_normal[4]
+Uninitialize() --> vkDestroyBuffer() for vertexData_normal[5]
+Uninitialize() --> vkFreeMemory() for vertexData_normal[5]
+Uninitialize() --> vkDestroyBuffer() for vertexData_normal[6]
+Uninitialize() --> vkFreeMemory() for vertexData_normal[6]
+Uninitialize() --> vkDestroyBuffer() for vertexData_normal[7]
+Uninitialize() --> vkFreeMemory() for vertexData_normal[7]
+Uninitialize() --> vkDestroyBuffer() for vertexData_normal[8]
+Uninitialize() --> vkFreeMemory() for vertexData_normal[8]
+Uninitialize() --> vkDestroyBuffer() for vertexData_index[0]
+Uninitialize() --> vkFreeMemory() for vertexData_index[0]
+Uninitialize() --> vkDestroyBuffer() for vertexData_index[1]
+Uninitialize() --> vkFreeMemory() for vertexData_index[1]
+Uninitialize() --> vkDestroyBuffer() for vertexData_index[2]
+Uninitialize() --> vkFreeMemory() for vertexData_index[2]
+Uninitialize() --> vkDestroyBuffer() for vertexData_index[3]
+Uninitialize() --> vkFreeMemory() for vertexData_index[3]
+Uninitialize() --> vkDestroyBuffer() for vertexData_index[4]
+Uninitialize() --> vkFreeMemory() for vertexData_index[4]
+Uninitialize() --> vkDestroyBuffer() for vertexData_index[5]
+Uninitialize() --> vkFreeMemory() for vertexData_index[5]
+Uninitialize() --> vkDestroyBuffer() for vertexData_index[6]
+Uninitialize() --> vkFreeMemory() for vertexData_index[6]
+Uninitialize() --> vkDestroyBuffer() for vertexData_index[7]
+Uninitialize() --> vkFreeMemory() for vertexData_index[7]
+Uninitialize() --> vkDestroyBuffer() for vertexData_index[8]
+Uninitialize() --> vkFreeMemory() for vertexData_index[8]
+Uninitialize() --> vkDestroyPipeline() is done
+Uninitialize() --> vkDestroyPipelineLayout() is done
+Uninitialize() --> vkDestroyShaderModule() (fragment) is done
+Uninitialize() --> vkDestroyShaderModule() (vertex) is done
+Uninitialize() --> vkDestroyFramebuffer() for array is done
+Uninitialize() --> vkDestroyRenderPass() is done
+Uninitialize() --> vkDestroyImageView() for depth is done
+Uninitialize() --> vkDestroyImage() for depth is done
+Uninitialize() --> vkFreeMemory() for depth is done
+Uninitialize() --> swapchainImageView_array is freed
+Uninitialize() --> swapchainImage_array is freed
+Uninitialize() --> vkDestroySwapchainKHR() is done
+Uninitialize() --> vkFreeCommandBuffers() is done
+Uninitialize() --> vkDestroyCommandPool() is done
+Uninitialize() --> vkDestroyDevice() is done
+Uninitialize() --> vkDestroySurfaceKHR() is done
+Uninitialize() --> vkDestroyDebugReportCallbackEXT() is done
+Uninitialize() --> vkDestroyInstance() is done
+Uninitialize() --> Program terminated successfully
