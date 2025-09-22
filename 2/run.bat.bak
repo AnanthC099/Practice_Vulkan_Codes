@@ -1,0 +1,12 @@
+cls
+
+cl.exe /c /EHsc /I C:\VulkanSDK\Vulkan\Include VK.cpp
+
+REM rc.exe VK.rc
+
+REM link.exe  VK.obj VK.res /LIBPATH:C:\VulkanSDK\Vulkan\Lib /SUBSYSTEM:WINDOWS 
+
+REM VK.exe
+
+REM del VK.obj VK.exe 
+
