@@ -1,0 +1,2 @@
+glslangValidator.exe -V -H -o shader.vert.spv shader.vert
+glslangValidator.exe -V -H -o shader.frag.spv shader.frag
