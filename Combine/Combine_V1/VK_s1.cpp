@@ -14,6 +14,11 @@
 #define VK_USE_PLATFORM_WIN32_KHR
 #include <vulkan/vulkan.h>
 
+// Fallback for _ARRAYSIZE if not provided by the environment
+#ifndef _ARRAYSIZE
+#define _ARRAYSIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
+#endif
+
 //glm related macros and header files
 #define GLM_FORCE_RADIANS
 #define GLM_FORCE_DEPTH_ZERO_TO_ONE   //clipping values between 0 and 1 for depth
@@ -2342,7 +2347,7 @@ VkResult createVulkanInstance(void)
     vkApplicationInfo.applicationVersion = 1;
     vkApplicationInfo.pEngineName = gpszAppName;
     vkApplicationInfo.engineVersion = 1;
-    vkApplicationInfo.apiVersion = VK_API_VERSION_1_4;
+    vkApplicationInfo.apiVersion = VK_API_VERSION_1_3;
 
     //Step3: Initialize struct VkInstanceCreateInfo by using information in Step1 and Step2
     VkInstanceCreateInfo vkInstanceCreateInfo;
